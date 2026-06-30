@@ -1,0 +1,129 @@
+---
+version: 1.0.0
+name: Fluxora AI Infrastructure
+description: A technical, high-performance dark theme optimized for SaaS and data-heavy products.
+colors:
+  background: "#0a0a0a"
+  foreground: "#ffffff"
+  neutral-950: "#0a0a0a"
+  neutral-900: "#171717"
+  neutral-600: "#525252"
+  neutral-400: "#a3a3a3"
+  neutral-300: "#d4d4d4"
+  blue-300: "#93c5fd"
+  blue-400: "#60a5fa"
+  blue-500: "#3b82f6"
+  emerald-400: "#34d399"
+  rose-400: "#fb7185"
+  amber-400: "#fbbf24"
+typography:
+  fontFamily: "Inter, system-ui, sans-serif"
+  h1:
+    fontSize: "4.5rem"
+    fontWeight: "700"
+    letterSpacing: "-0.05em"
+  h2:
+    fontSize: "3rem"
+    fontWeight: "600"
+    letterSpacing: "-0.02em"
+  body:
+    fontSize: "1rem"
+    lineHeight: "1.6"
+  caption:
+    fontSize: "0.75rem"
+    fontWeight: "500"
+  code:
+    fontSize: "0.625rem"
+    fontFamily: "monospace"
+spacing:
+  xs: "4px"
+  sm: "8px"
+  md: "16px"
+  lg: "24px"
+  xl: "32px"
+  section: "96px"
+rounded:
+  sm: "8px"
+  md: "12px"
+  lg: "16px"
+  xl: "24px"
+  full: "9999px"
+components:
+  button-primary:
+    background: "#ffffff"
+    color: "#0a0a0a"
+    rounded: "9999px"
+  card-bento:
+    background: "linear-gradient(225deg, rgba(255,255,255,0.0), rgba(255,255,255,0.05))"
+    border: "1px solid rgba(255,255,255,0.1)"
+    backdropBlur: "12px"
+  pill-indicator:
+    background: "rgba(255,255,255,0.05)"
+    border: "border-gradient"
+    rounded: "9999px"
+  header-nav:
+    position: "sticky"
+    padding: "20px"
+  data-table-preview:
+    background: "rgba(0,0,0,0.4)"
+    rounded: "22px"
+motion:
+  standard: "fadeSlideIn 0.8s ease-out"
+  hover: "translateY(-2px) 0.3s ease"
+  marquee: "45s linear infinite"
+---
+## Overview
+Fluxora is a dark-mode first visual system designed for technical audiences. It emphasizes depth through subtle gradients and structural clarity using bento-style grids.
+
+## Colors
+The palette is rooted in `neutral-950` with primary utility provided by `blue-400`. High-saturation status colors (Emerald, Rose, Amber) are used sparingly for data visualization and code syntax highlighting.
+
+## Typography
+Relies exclusively on **Inter** for all weights. Hierarchy is established through extreme scale differences (e.g., 72pt headers vs 11pt captions) and tight tracking on headings to maintain a premium, architectural feel.
+
+## Spacing
+A rigorous grid system based on multiples of 4px. Section breathing room is generous (96px+) to offset the density of the information-rich bento cards.
+
+## Layout
+- **Bento Grid**: Uses a 12-column responsive grid for feature showcases.
+- **Z-Index Layering**: Background (Grid Pattern) < Midground (Glass Cards) < Foreground (Overlays/Popovers).
+- **Responsive Behavior**: Transitions from complex multi-column grids to single-column stacks with consistent `24px` guttering.
+
+## Elevation & Depth
+Depth is achieved without drop shadows. Instead, Fluxora uses:
+- **Inner Gradients**: Subtle white-to-transparent linear gradients on borders.
+- **Backdrop Blurs**: Heavy blur (10px-20px) on containers to separate content from the grid background.
+- **Glows**: Radial gradients with 10% opacity blue/white to simulate light sources behind active components.
+
+## Shapes
+- **Container Radius**: Standardized at `24px` for large cards.
+- **Interactive Radius**: Buttons and status pills are always `9999px` (fully rounded).
+- **Inner Elements**: Nested items use `12px` or `16px` to maintain visual nesting ratios.
+
+## Components
+- **Nav**: Minimalist fixed-top bar with glassmorphic background.
+- **Bento Cards**: Integrated containers for images, stats, and live code previews.
+- **Pills**: High-contrast labels (e.g., "New") using low-alpha backgrounds.
+- **Charts**: Simplified bar and candlestick charts using specific brand status colors.
+- **Testimonial Marquee**: Seamless horizontal looping of verified user feedback.
+
+## Motion
+- **Entry**: `fadeSlideIn` triggers on scroll with a 30px Y-offset and 8px blur.
+- **Feedback**: Subtle scale (1.02x) or Y-translation (-2px) on hover for interactive elements.
+- **Continuous**: Ambient pulse animations on status indicators and grid glow effects.
+
+## Do's and Don'ts
+### Do
+- Use `border-gradient` on all primary card containers.
+- Maintain high contrast between text and background.
+- Use transparency (`rgba`) for secondary border elements.
+
+### Don'ts
+- Do not use solid bright background colors for sections.
+- Do not use sharp 0px corners.
+- Avoid using standard box-shadows; prefer inner gradients.
+
+## Accessibility
+- Minimum contrast is maintained through the use of white text on neutral-950.
+- Focus states are reinforced by high-visibility blue borders.
+- Reduced motion is respected via CSS media queries for all marquee and scroll animations.
